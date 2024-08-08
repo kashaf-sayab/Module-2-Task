@@ -1,0 +1,689 @@
+/*
+Theme Name: RB Portfolio One
+Text Domain: rb-portfolio-one
+Version: 1.1.9
+Requires at least: 6.1
+Tested up to: 6.2
+Requires PHP: 5.6
+Description: This theme is onepage portfolio theme.
+Author: Bashir Rased
+Author URI: https://profiles.wordpress.org/bashirrased2017/
+Theme URI: https://github.com/BashirRased/wp-theme-rb-portfolio-one
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, custom-menu, custom-logo, featured-images, sticky-post, threaded-comments, translation-ready
+
+RB Portfolio One WordPress Theme, (C) 2023 Bashir Rased.
+RB Portfolio One is distributed under the terms of the GNU GPL.
+*/
+
+
+/*======================================
+===== 01. Preloader CSS Start Here =====
+======================================*/
+.loader-con {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-bg);
+    -webkit-transition: all 1s cubic-bezier(.7, 0, .3, 1), opacity .75s ease-in-out;
+    -o-transition: all 1s cubic-bezier(.7, 0, .3, 1), opacity .75s ease-in-out;
+    -moz-transition: all 1s cubic-bezier(.7, 0, .3, 1), opacity .75s ease-in-out;
+    transition: all 1s cubic-bezier(.7, 0, .3, 1), opacity .75s ease-in-out;
+    z-index: 999999;
+	background: #f0f0f0;
+}
+.loaded .loader-con {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    display: block;
+    width: 3.75em;
+    height: 4.25em;
+    margin-left: -1.875em;
+    margin-top: -2.125em;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transform: rotateY(180deg) rotateZ(-60deg);
+    -moz-transform: rotateY(180deg) rotateZ(-60deg);
+    transform: rotateY(180deg) rotateZ(-60deg);
+    -webkit-animation: 2s preload-flip steps(2) infinite both;
+    -moz-animation: 2s preload-flip steps(2) infinite both;
+    animation: 2s preload-flip steps(2) infinite both;
+}
+.preloader .slice {
+    border-top: 1.125em solid transparent;
+    border-right: none;
+    border-bottom: 1em solid transparent;
+    border-left: 1.875em solid var(--primary-color);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform-origin: left bottom;
+    -moz-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+}
+.preloader .slice:nth-child(1) {
+    -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+    -moz-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+    transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+    -webkit-animation: 2s preload-cycle-1 linear infinite both;
+    -moz-animation: 2s preload-cycle-1 linear infinite both;
+    animation: 2s preload-cycle-1 linear infinite both;
+}
+.preloader .slice:nth-child(2) {
+    -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+    -moz-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+    transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+    -webkit-animation: 2s preload-cycle-2 linear infinite both;
+    -moz-animation: 2s preload-cycle-2 linear infinite both;
+    animation: 2s preload-cycle-2 linear infinite both;
+}
+.preloader .slice:nth-child(3) {
+    -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+    -moz-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+    transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+    -webkit-animation: 2s preload-cycle-3 linear infinite both;
+    -moz-animation: 2s preload-cycle-3 linear infinite both;
+    animation: 2s preload-cycle-3 linear infinite both;
+}
+
+.preloader .slice:nth-child(4) {
+    -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+    -moz-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+    transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+    -webkit-animation: 2s preload-cycle-4 linear infinite both;
+    -moz-animation: 2s preload-cycle-4 linear infinite both;
+    animation: 2s preload-cycle-4 linear infinite both;
+}
+.preloader .slice:nth-child(5) {
+    -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+    -moz-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+    transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+    -webkit-animation: 2s preload-cycle-5 linear infinite both;
+    -moz-animation: 2s preload-cycle-5 linear infinite both;
+    animation: 2s preload-cycle-5 linear infinite both;
+}
+.preloader .slice:nth-child(6) {
+    -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+    -moz-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+    transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+    -webkit-animation: 2s preload-cycle-6 linear infinite both;
+    -moz-animation: 2s preload-cycle-6 linear infinite both;
+    animation: 2s preload-cycle-6 linear infinite both;
+}
+@-webkit-keyframes preload-cycle-1 {
+    100%,
+    5%,
+    80% {
+        -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    10%,
+    75% {
+        -webkit-transform: rotateZ(60deg) rotateY(0) rotateX(0);
+        transform: rotateZ(60deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-moz-keyframes preload-cycle-1 {
+    100%,
+    5%,
+    80% {
+        -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    10%,
+    75% {
+        -webkit-transform: rotateZ(60deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(60deg) rotateY(0) rotateX(0);
+        transform: rotateZ(60deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@keyframes preload-cycle-1 {
+    100%,
+    5%,
+    80% {
+        -webkit-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(60deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    10%,
+    75% {
+        -webkit-transform: rotateZ(60deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(60deg) rotateY(0) rotateX(0);
+        transform: rotateZ(60deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-webkit-keyframes preload-cycle-2 {
+    10%,
+    100%,
+    75% {
+        -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    15%,
+    70% {
+        -webkit-transform: rotateZ(120deg) rotateY(0) rotateX(0);
+        transform: rotateZ(120deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-moz-keyframes preload-cycle-2 {
+    10%,
+    100%,
+    75% {
+        -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    15%,
+    70% {
+        -webkit-transform: rotateZ(120deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(120deg) rotateY(0) rotateX(0);
+        transform: rotateZ(120deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@keyframes preload-cycle-2 {
+    10%,
+    100%,
+    75% {
+        -webkit-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(120deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    15%,
+    70% {
+        -webkit-transform: rotateZ(120deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(120deg) rotateY(0) rotateX(0);
+        transform: rotateZ(120deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-webkit-keyframes preload-cycle-3 {
+    100%,
+    15%,
+    70% {
+        -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    20%,
+    65% {
+        -webkit-transform: rotateZ(180deg) rotateY(0) rotateX(0);
+        transform: rotateZ(180deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-moz-keyframes preload-cycle-3 {
+    100%,
+    15%,
+    70% {
+        -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    20%,
+    65% {
+        -webkit-transform: rotateZ(180deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(180deg) rotateY(0) rotateX(0);
+        transform: rotateZ(180deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@keyframes preload-cycle-3 {
+    100%,
+    15%,
+    70% {
+        -webkit-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(180deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    20%,
+    65% {
+        -webkit-transform: rotateZ(180deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(180deg) rotateY(0) rotateX(0);
+        transform: rotateZ(180deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-webkit-keyframes preload-cycle-4 {
+    100%,
+    20%,
+    65% {
+        -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    25%,
+    60% {
+        -webkit-transform: rotateZ(240deg) rotateY(0) rotateX(0);
+        transform: rotateZ(240deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-moz-keyframes preload-cycle-4 {
+    100%,
+    20%,
+    65% {
+        -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    25%,
+    60% {
+        -webkit-transform: rotateZ(240deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(240deg) rotateY(0) rotateX(0);
+        transform: rotateZ(240deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@keyframes preload-cycle-4 {
+    100%,
+    20%,
+    65% {
+        -webkit-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(240deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    25%,
+    60% {
+        -webkit-transform: rotateZ(240deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(240deg) rotateY(0) rotateX(0);
+        transform: rotateZ(240deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-webkit-keyframes preload-cycle-5 {
+    100%,
+    25%,
+    60% {
+        -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    30%,
+    55% {
+        -webkit-transform: rotateZ(300deg) rotateY(0) rotateX(0);
+        transform: rotateZ(300deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-moz-keyframes preload-cycle-5 {
+    100%,
+    25%,
+    60% {
+        -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    30%,
+    55% {
+        -webkit-transform: rotateZ(300deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(300deg) rotateY(0) rotateX(0);
+        transform: rotateZ(300deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@keyframes preload-cycle-5 {
+    100%,
+    25%,
+    60% {
+        -webkit-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(300deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    30%,
+    55% {
+        -webkit-transform: rotateZ(300deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(300deg) rotateY(0) rotateX(0);
+        transform: rotateZ(300deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-webkit-keyframes preload-cycle-6 {
+    100%,
+    30%,
+    55% {
+        -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    35%,
+    50% {
+        -webkit-transform: rotateZ(360deg) rotateY(0) rotateX(0);
+        transform: rotateZ(360deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-moz-keyframes preload-cycle-6 {
+    100%,
+    30%,
+    55% {
+        -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    35%,
+    50% {
+        -webkit-transform: rotateZ(360deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(360deg) rotateY(0) rotateX(0);
+        transform: rotateZ(360deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@keyframes preload-cycle-6 {
+    100%,
+    30%,
+    55% {
+        -webkit-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+        -moz-transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+        transform: rotateZ(360deg) rotateY(90deg) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+    35%,
+    50% {
+        -webkit-transform: rotateZ(360deg) rotateY(0) rotateX(0);
+        -moz-transform: rotateZ(360deg) rotateY(0) rotateX(0);
+        transform: rotateZ(360deg) rotateY(0) rotateX(0);
+        border-left-color: var(--primary-color);
+    }
+}
+@-webkit-keyframes preload-flip {
+    0% {
+        -webkit-transform: rotateY(0) rotateZ(-60deg);
+        transform: rotateY(0) rotateZ(-60deg);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg) rotateZ(-60deg);
+        transform: rotateY(360deg) rotateZ(-60deg);
+    }
+}
+@-moz-keyframes preload-flip {
+    0% {
+        -webkit-transform: rotateY(0) rotateZ(-60deg);
+        -moz-transform: rotateY(0) rotateZ(-60deg);
+        transform: rotateY(0) rotateZ(-60deg);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg) rotateZ(-60deg);
+        -moz-transform: rotateY(360deg) rotateZ(-60deg);
+        transform: rotateY(360deg) rotateZ(-60deg);
+    }
+}
+@keyframes preload-flip {
+    0% {
+        -webkit-transform: rotateY(0) rotateZ(-60deg);
+        -moz-transform: rotateY(0) rotateZ(-60deg);
+        transform: rotateY(0) rotateZ(-60deg);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg) rotateZ(-60deg);
+        -moz-transform: rotateY(360deg) rotateZ(-60deg);
+        transform: rotateY(360deg) rotateZ(-60deg);
+    }
+}
+/*======================================
+===== 01. Preloader CSS Start Here =====
+======================================*/
+
+/*===============================================
+===== 02. Header Topbar Area CSS Start Here =====
+===============================================*/
+.header-top-area {
+	padding: 10px 0;
+	color: #ffffff;
+	background-color: var(--primary-color);
+}
+.header-top-area span:first-child {
+	margin-right: 10px;
+}
+/*=============================================
+===== 02. Header Topbar Area CSS End Here =====
+=============================================*/
+
+/*=============================================
+===== 02. Header Menu Area CSS Start Here =====
+=============================================*/
+.header-menu-area.header-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+}
+
+.header-menu-area.header-position {
+    position: absolute;
+    width: 100%;
+}
+
+.header-menu-area {
+    position: relative;
+    box-shadow: var(--light-shadow);
+    background-color: var(--white-color);
+    z-index: 9;
+}
+
+.header-menu {
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+}
+
+.header-menu ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.header-menu ul li {
+    position: relative;
+    display: inline-block;	
+	padding: 20px;
+}
+
+.header-menu ul li:last-child {
+	padding-right: 0;
+}
+
+.header-menu ul li a {
+	display: block;
+	position: relative;
+	color: var(--black-color);
+	text-decoration: none;
+}
+
+.header-menu ul li.page_item_has_children > a::after {
+    content: "\f107";
+    font-family: "FontAwesome";
+    margin-left: 5px;
+}
+
+.header-menu a:hover,
+.header-menu a:focus {
+	color: var(--primary-color);
+}
+
+.header-menu ul li.menu-item-has-children > a,
+.header-menu ul li.page_item_has_children > a {
+    position: relative;
+}
+
+.header-menu ul li.menu-item-has-children > a::after,
+.header-menu ul li.page_item_has_children > a::after {
+    content: "\f107";
+    font-family: "FontAwesome";
+    margin-left: 5px;
+}
+
+.header-menu ul li .children,
+.header-menu ul li .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: -99999px;
+    min-width: 230px;
+    background-color: var(--white-color);  
+    -webkit-box-shadow: var(--light-shadow);
+    -moz-box-shadow: var(--light-shadow);
+    -ms-box-shadow: var(--light-shadow);
+    -o-box-shadow: var(--light-shadow);
+    box-shadow: var(--light-shadow);
+	z-index: 99;
+}
+
+.header-menu ul > li:hover .children,
+.header-menu ul > li:focus-within .children,
+.header-menu ul > li:hover .sub-menu,
+.header-menu ul > li:focus-within .sub-menu {
+	left: 0;
+}
+
+.header-menu ul li .children li,
+.header-menu ul li .sub-menu li {
+	display: block;
+}
+
+.header-menu ul li .children li a,
+.header-menu ul li .sub-menu li a {
+	position: relative;
+}
+
+.header-menu ul li .children li a:hover,
+.header-menu ul li .children li a:focus,
+.header-menu ul li .sub-menu li a:hover,
+.header-menu ul li .sub-menu li a:focus {
+	padding-left: 25px;
+}
+
+.header-menu ul li .children li a::before,
+.header-menu ul li .sub-menu li a::before {
+	opacity: 0;
+    position: absolute;
+    content: "\f178";
+    font-family: "FontAwesome";
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: var(--primary-color);
+	transition: var(--transition);
+}
+
+.header-menu ul li .children li a:hover::before,
+.header-menu ul li .children li a:focus::before,
+.header-menu ul li .sub-menu li a:hover::before,
+.header-menu ul li .sub-menu li a:focus::before  {
+	opacity: 1;
+}
+
+.header-menu ul li .children li.page_item_has_children > a::after,
+.header-menu ul li .sub-menu li.menu-item-has-children > a::after {
+    content: "\f105";
+    font-family: "FontAwesome";
+    margin-left: 5px;
+}
+
+.header-menu ul li .children .children,
+.header-menu ul li .sub-menu .sub-menu {
+	top: -99999px;
+	left: 100%;
+}
+
+.header-menu ul li .children > li:hover .children,
+.header-menu ul li .children > li:focus-within .children,
+.header-menu ul li .sub-menu > li:hover .sub-menu,
+.header-menu ul li .sub-menu > li:focus-within .sub-menu {
+	top: 0;
+}
+/*===========================================
+===== 02. Header Menu Area CSS End Here =====
+===========================================*/
+
+/*==================================================
+===== 02. Header Breadcrumbs Area CSS End Here =====
+==================================================*/
+.header-breadcrumbs-area {
+	padding: 115px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.header-breadcrumbs-title {
+	text-align: center;
+    color: var(--white-color);
+	margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.header-breadcrumbs-nav {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.header-breadcrumbs-nav span {
+	display: inline-block;
+}
+
+.header-breadcrumbs-nav a {
+	color: var(--white-color);
+}
+
+.header-breadcrumbs-nav a:hover,
+.header-breadcrumbs-nav a:focus {
+	color: var(--primary-color);
+}
+
+
+.header-breadcrumbs-nav > span:last-child {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.header-breadcrumbs-description {
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-breadcrumbs-description p {
+    margin-bottom: 0;
+}
+/*==================================================
+===== 02. Header Breadcrumbs Area CSS End Here =====
+==================================================*/

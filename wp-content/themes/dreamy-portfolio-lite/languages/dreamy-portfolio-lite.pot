@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-05 15:21+0545\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: functions.php:30
+msgctxt "Kaushan Script font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:35
+msgctxt "Redressed: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:67
+msgid "info@sensationaltheme.com"
+msgstr ""
+
+#: functions.php:68
+msgid "+1-541-754-3010"
+msgstr ""
+
+#: functions.php:69
+msgid "London, UK"
+msgstr ""
+
+#: functions.php:99
+msgid "Follow Me:"
+msgstr ""
+
+#: functions.php:105
+msgid "I never dreamed about success, I worked for it."
+msgstr ""
+
+#: functions.php:106
+msgid "About"
+msgstr ""
+
+#: functions.php:107
+msgid ""
+"Business consulting excepteur sint occaecat cupidatat consulting non "
+"proident, sunt in culpa qui officia deserunt laborum Market.Business "
+"consulting excepteur sint occaecat cupidatat consulting non proident, sunt "
+"in culpa qui officia deserunt laborum Market.Business consulting excepteur "
+"sint occaecat cupidatat consulting"
+msgstr ""
+
+#: functions.php:108
+msgid "Know More"
+msgstr ""
+
+#: functions.php:119
+msgid "Reasons to Choose My Services"
+msgstr ""
+
+#: functions.php:120
+msgid "Services"
+msgstr ""
+
+#: functions.php:133
+msgid "Experience my effective portfolios"
+msgstr ""
+
+#: functions.php:134 functions.php:149
+msgid "View All Projects"
+msgstr ""
+
+#: functions.php:135
+msgid "Portfolio"
+msgstr ""
+
+#: functions.php:148
+msgid "Our clients reviews."
+msgstr ""
+
+#: functions.php:150
+msgid "Testimonials"
+msgstr ""
+
+#: functions.php:160
+msgid "Need More Help?"
+msgstr ""
+
+#: functions.php:161
+msgid "A better way to hire our best help"
+msgstr ""
+
+#: functions.php:162
+msgid "Purchase Now"
+msgstr ""
+
+#: functions.php:164
+msgid "Contact Us"
+msgstr ""
+
+#: functions.php:172
+msgid "Latest Post"
+msgstr ""
+
+#: functions.php:173
+msgid "Blog"
+msgstr ""
+
+#: functions.php:183
+msgid "My Latest Blogs"
+msgstr ""
+
+#: functions.php:184
+msgid ""
+"I love natural beauty, and I think it’s your best look, but I think makeup "
+"as an artist is so transformative."
+msgstr ""
+
+#: functions.php:220
+msgid "Read More"
+msgstr ""
+
+#: functions.php:229
+msgid "Copyright &copy; All rights reserved."
+msgstr ""
+
+#: functions.php:230
+msgid "Dreamy Portfolio by Sensational Theme"
+msgstr ""

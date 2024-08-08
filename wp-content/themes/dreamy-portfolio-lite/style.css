@@ -1,0 +1,424 @@
+/*
+Theme Name: Dreamy Portfolio Lite
+Theme URI: http://sensationaltheme.com/downloads/dreamy-portfolio-lite-free/
+Template: dreamy-portfolio
+Author: Sensational Theme
+Author URI: http://sensationaltheme.com/
+Description: Dreamy Portfolio Lite is a modern Multipurpose and HTML5 WordPress theme for creating beautiful, accessible and fast loading websites. Without a question, this is the most functional, competent, mobile-friendly, and visually attractive WordPress theme. Dreamy Portfolio Lite theme is completely customizable, SEO-friendly, responsive, interactive, and has a quicker website load time. The theme is well-designed and adaptable, and it performs admirably. You also get support for custom headers, two column layout, full-width layout, and tons of easy customization options.
+Tags: translation-ready,custom-background,theme-options,custom-menu,threaded-comments,featured-images,footer-widgets,editor-style,right-sidebar,full-width-template,two-columns,grid-layout,custom-colors,custom-header,custom-logo,featured-image-header,blog,entertainment
+Version: 1.1
+Tested up to: 6.0
+Requires PHP: 5.6
+Text Domain: dreamy-portfolio-lite
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: translation-ready, custom-background, theme-options, custom-menu, threaded-comments, featured-images, footer-widgets, editor-style, right-sidebar, full-width-template, two-columns, three-columns, grid-layout, custom-colors, custom-header, custom-logo, featured-image-header, blog, entertainment
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Dreamy Portfolio Lite is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+.main-navigation a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: 'Ubuntu';
+}
+.site-menu .site-branding {
+  width: 100%;
+  float: none;
+  text-align: center;
+}
+.main-navigation ul.nav-menu {
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
+}
+.site-menu nav {
+  width: 100%;
+  float: none;
+}
+
+.section-header {
+  	margin-bottom: 20px;
+  	text-align: center;
+  	padding-top: 20px;
+}
+.section-title{
+	margin-top: 0;
+}
+.section-subtitle {
+  	margin: 0;
+  	color: #FD4766;
+  	font-size: 20px;
+  	font-weight: 400;
+  	position: relative;
+  	line-height: 1;
+  	-webkit-text-stroke: transparent;
+  	text-transform: capitalize;
+  	opacity: 1;
+  	font-family: "Kaushan Script";
+}
+#services{
+	padding: 60px 0;
+	background-color: #f9f9f9;
+}
+#services .services-item-wrapper .featured-image {
+  width: 30%;
+  padding-right: 10px;
+}
+.services-item-wrapper {
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	transition: all 0.3s;
+	background-color: #fff;
+	text-align: left;
+	border: 1px solid #FD4766;
+}
+.entry-title, .section-title {
+  font-size: 28px;
+}
+#services .icon-container a {
+  	margin: 0 auto;
+}
+#services .icon-container {
+  margin: 0;
+  padding:0 10px;
+}
+.right-services{
+	display: none;
+}
+.slider-box,
+#about-ball{
+	display: none;
+}
+#details article.has-post-thumbnail {
+  display: flex;
+  align-items: center;
+}
+.project-slider article {
+	position: relative;
+}
+.project-slider .entry-container {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	width: 100%;
+	background: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent);
+}
+.project-slider .featured-image{
+	box-shadow: none;
+}
+.project-slider .slick-next,
+.project-slider .slick-prev{
+	display: none !important;
+}
+.project-slider .cat-links a{
+	color: #fff;
+}
+.project-slider .entry-title a {
+  	color: #fff;
+}
+.cat-links a, .entry-meta .cat-links a {
+  display: inline-block;
+  font-size: 14px;
+  background-color: #FD4766;
+  color: #fff;
+  padding: 0 5px;
+}
+#blog .entry-meta {
+  border: none;
+  padding: 0px;
+  text-align: left;
+  position: absolute;
+  top: -40px;
+  bottom: auto;
+  left: 0;
+  right: auto;
+}
+#blog .entry-title{
+	font-size: 24px;
+}
+#blog .blog-item-wrapper {
+  background-color: transparent;
+}
+#blog .blog-item-wrapper:hover {
+  box-shadow: none;
+}
+#blog .featured-image {
+  position: relative;
+  background-size: cover;
+  background-position: 50%;
+  padding: 150px 0;
+  margin-bottom: 0;
+  z-index: -1;
+}
+#blog .blog-item-wrapper .entry-container {
+  padding: 10px 20px 0px;
+  width: 90%;
+  margin: -50px auto 0;
+  background-color: #fff;
+  position: relative;
+}
+.cta-container {
+	display: block !important;
+	position: relative;
+}
+#cta .section-header,
+#cta .section-title {
+  width: 100% !important;
+  text-align: center !important;
+  line-height: 1.3;
+  font-size: 36px;
+}
+#cta .section-cta-subtitle {
+  font-size: 18px;
+  line-height: 1.3;
+}
+#cta .read-more {
+  width: 100% !important;
+}
+#cta p {
+  margin-left: auto;
+}
+/*--------------------------------------------------------------
+#  Information Section
+--------------------------------------------------------------*/
+
+#information{
+    padding: 60px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+#information .section-subtitle{
+    text-align: left;
+}
+
+#information article.no-post-thumbnail .featured-image {
+    display: none;
+}
+#information .personal-skills,
+#information .entry-container {
+    width: 100%;
+    float: none;
+    padding: 30px 0 0;
+}
+#information article {
+    position: relative;
+    margin-bottom: 50px;
+}
+#information .section-details,
+#information .section-title {
+    color: #fff;
+}
+#information .section-header {
+    text-align: left;
+}
+#information .entry-header .entry-title {
+    color: #fff;
+    margin: 0;
+}
+#information article:last-child {
+    margin-bottom: 0;
+}
+#information .featured-image {
+    position: relative;
+    background-size: cover;
+    background-position: 50%;
+    padding: 125px 0;
+    margin-bottom: 30px;
+}
+#information .read-more .btn:not(:last-child) {
+    margin-right: 15px;
+}
+
+#information article:last-child {
+    margin-bottom: 0;
+}
+#information .information-content{
+    display:flex;
+    background-color: #FD4766;
+    color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+}
+#information .information-item-wrapper{
+    background-color: #f29393;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+#information .entry-content { 
+    text-align: right;
+    padding: 0 0 0 100px;
+}
+#information .entry-content p {
+    text-align: right;
+}
+#information article .read-more {
+    margin-top: 25px;
+}
+#information .information-content,
+#services .service-content{
+    padding-left: 20px;
+}
+/*--------------------------------------------------------------
+#  portfolio
+--------------------------------------------------------------*/
+#portfolio {
+    padding: 60px 0;
+}
+#portfolio .section-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#portfolio .section-title:after {
+    left: 0;
+    right: 0;
+}
+#portfolio .entry-title {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+#portfolio .featured-image {
+    padding: 200px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#portfolio .entry-title a {
+    color: #fff;
+}
+#portfolio .portfolio-content {
+    padding: 30px 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+    transition: transform .2s ease-out,top .2s ease-out; 
+    -moz-transition: transform .2s ease-out,top .2s ease-out;
+    -o-transition: transform .2s ease-out,top .2s ease-out;
+    -webkit-transition: transform .2s ease-out,top .2s ease-out;
+    visibility: hidden;
+}
+#portfolio .portfolio-item-wrapper:hover .portfolio-content {
+    top: 50%;
+    bottom: auto;
+    transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -webkit-transform: translate(0,-50%);
+    visibility: visible;
+}
+#portfolio .overlay-one {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0;
+    alpha(opacity=0): ;
+    transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    -webkit-transition: opacity .3s;
+}
+#portfolio .overlay-two {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 50px;
+    background: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent);
+}
+#portfolio .portfolio-item-wrapper:hover .overlay-one {
+    opacity: .65;
+    filter: alpha(opacity=65);
+}
+#portfolio .entry-header{
+    text-align: center;
+    transform: translate(0,-100%);
+    -moz-transform: translate(0,-100%);
+    -webkit-transform: translate(0,-100%);
+    transition: transform .2s ease-out,padding .2s ease-out;
+    -moz-transition: transform .2s ease-out,padding .2s ease-out;
+    -o-transition: transform .2s ease-out,padding .2s ease-out;
+    -webkit-transition: transform .2s ease-out,padding .2s ease-out;
+}
+#portfolio .portfolio-item-wrapper:hover .entry-header {
+    padding-bottom: 8px;
+    transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+}
+#portfolio .entry-content {
+    line-height: 35px;
+    color: #fff;
+}
+#portfolio .entry-content p{
+    color: #fff;
+}
+#portfolio ul.tabs {
+    border-bottom: 1px solid #e5e5e5;
+}
+ul.tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.tabs li {
+    display: block;
+    margin-bottom: 10px;
+}
+ul.tabs li:last-child {
+    margin-bottom: 0;
+}
+ul.tabs li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 30px;
+    padding: 10px 40px;
+}
+@media screen and (min-width: 1200px){
+	.project-slider .slick-list {
+	  margin-right: 0;
+	  padding-right: 0;
+	  z-index: 1;
+	}
+	#project .project-slider {
+	  margin-right: 0;
+	  margin-left: auto;
+	  max-width: 1600px;
+	}
+	#testimonial .testimonial-slider {
+	  max-width: 1600px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	
+}
+ @media screen and (min-width: 1024px){
+	.fullwidth-slider #featured-slider article, .default-slider #featured-slider article {
+	  	padding: 300px 0;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.fullwidth-slider #featured-slider article{
+		padding: 400px 0 !important;
+	}
+}

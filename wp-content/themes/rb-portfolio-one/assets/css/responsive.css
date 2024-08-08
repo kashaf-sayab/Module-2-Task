@@ -1,0 +1,78 @@
+/*
+Theme Name: RB Portfolio One
+Text Domain: rb-portfolio-one
+Version: 1.1.9
+Requires at least: 6.1
+Tested up to: 6.2
+Requires PHP: 5.6
+Description: This theme is onepage portfolio theme.
+Author: Bashir Rased
+Author URI: https://profiles.wordpress.org/bashirrased2017/
+Theme URI: https://github.com/BashirRased/wp-theme-rb-portfolio-one
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, custom-menu, custom-logo, featured-images, sticky-post, threaded-comments, translation-ready
+
+RB Portfolio One WordPress Theme, (C) 2023 Bashir Rased.
+RB Portfolio One is distributed under the terms of the GNU GPL.
+*/
+
+@media only screen and (max-width: 991px) {
+    .header-top-left,
+    .header-top-right {
+        text-align: center;
+    }
+
+    .header-menu {
+        display: block;
+    }
+
+    .header-menu ul li.menu-item-has-children > a::after,
+    .header-menu ul li.page_item_has_children > a::after {
+        display: none;
+    }
+
+    .header-menu ul li .children, .header-menu ul li .sub-menu {
+        position: static;
+    }
+
+    .mean-container .mean-nav ul li a:hover,
+    .mean-container .mean-nav ul li a:focus {
+        background-color: var(--black-color);
+    }
+
+    .header-menu ul li .children li a::before,
+    .header-menu ul li .sub-menu li a::before {
+        left: 35px;
+    }
+
+    .header-menu ul li .children li a:hover,
+    .header-menu ul li .children li a:focus,
+    .header-menu ul li .sub-menu li a:hover,
+    .header-menu ul li .sub-menu li a:focus {
+        padding-left: 70px;
+    }
+
+    .header-menu ul li .children li.page_item_has_children > a::after,
+    .header-menu ul li .sub-menu li.menu-item-has-children > a::after {
+        display: none;
+    }
+
+    .header-menu ul li .children .children li a::before,
+    .header-menu ul li .sub-menu .sub-menu li a::before {
+        left: 70px;
+    }
+
+    .header-menu ul li .children .children li a:hover,
+    .header-menu ul li .children .children li a:focus,
+    .header-menu ul li .sub-menu .sub-menu li a:hover,
+    .header-menu ul li .sub-menu .sub-menu li a:focus {
+        padding-left: 105px;
+    }
+
+    .mean-expand::before,
+    .mean-expand::after {
+        display: none;
+    }
+
+}
